@@ -146,22 +146,10 @@ class TitleState extends MusicBeatState
 		if (!initialized)
 		{
 			if(FlxG.sound.music == null) {
-				if (ClientPrefs.menuMusic == 'Getting Freaky')
 				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-				if (ClientPrefs.menuMusic == 'B-Sides')
-					FlxG.sound.playMusic(Paths.music('b-sides'), 0);
-				if (ClientPrefs.menuMusic == 'Funky')
-					FlxG.sound.playMusic(Paths.music('funky'), 0);
-				if (ClientPrefs.menuMusic == 'Tea Time')
-					FlxG.sound.playMusic(Paths.music('tea-time'), 0);
 			}
 		}
 
-		if (ClientPrefs.menuMusic == 'Tea Time')
-		Conductor.changeBPM(53);
-		else if (ClientPrefs.menuMusic == 'Funky')
-		Conductor.changeBPM(70);
-		else
 		Conductor.changeBPM(102);
 
 		persistentUpdate = true;
@@ -402,26 +390,10 @@ class TitleState extends MusicBeatState
 
 		if(!closedState) {
 			sickBeats++;
-			if (ClientPrefs.introskip) {
-				switch (sickBeats)
-				{
-				case 1:
-					skipIntro();
-				}
-			}
-			else {
 			switch (sickBeats)
 			{
 				case 1:
-					if (ClientPrefs.menuMusic == 'Getting Freaky')
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-					else if (ClientPrefs.menuMusic == 'B-Sides')
-						FlxG.sound.playMusic(Paths.music('b-sides'), 0);
-					else if (ClientPrefs.menuMusic == 'Funky')
-						FlxG.sound.playMusic(Paths.music('funky'), 0);
-					else if (ClientPrefs.menuMusic == 'Tea Time')
-						FlxG.sound.playMusic(Paths.music('tea-time'), 0);
-
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
 					createCoolText(['Psych Forever Engine by'], 15);
