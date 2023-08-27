@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				57,
+				242
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "die"
+		},
+		{
+			"offsets": [
+				57,
+				296
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "confirm"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				56,
+				291
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "death loop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/death",
+	"position": [
+		0,
+		450
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
