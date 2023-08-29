@@ -92,6 +92,14 @@ class MainMenuState extends MusicBeatState
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
 		add(magenta);
+
+		var thisThing:FlxSprite = new FlxSprite();
+		thisThing.frames = Paths.getSparrowAtlas('mainmenu/thisidk');
+		thisThing.antialiasing = ClientPrefs.globalAntialiasing;
+		thisThing.animation.addByPrefix('idle', 'thingidk', 24, false);
+		thisThing.animation.play('idle');
+		thisThing.updateHitbox();
+		add(thisThing);
 		
 		// magenta.scrollFactor.set();
 
@@ -114,13 +122,11 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
 		}
 
