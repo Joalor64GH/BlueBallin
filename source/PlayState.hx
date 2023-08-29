@@ -4189,15 +4189,6 @@ class PlayState extends MusicBeatState
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
-		// suggested by walter
-		if (Paths.formatToSongPath(SONG.song) == 'dad-battle')
-		{
-			if (health > 0.1)
-			{
-				health -= 0.25;
-			}
-		}
-
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
 			dad.playAnim('hey', true);
 			dad.specialAnim = true;

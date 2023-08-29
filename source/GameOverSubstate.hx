@@ -54,6 +54,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		LLLLLL = new FlxSprite(0, 0).loadGraphic(Paths.image('hugeL'));
 		LLLLLL.screenCenter(X);
 		LLLLLL.x = boyfriend.x + 425;
+		LLLLLL.x = boyfriend.y;
         add(LLLLLL);
 
 		resultsTxt = new FlxText(12, FlxG.height - 44, 0,  
